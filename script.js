@@ -1,0 +1,1 @@
+var newsSApiKey = "d775fffd012c44ec8001a6ace97e7e1f"
