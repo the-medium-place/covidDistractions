@@ -5,6 +5,8 @@ html, body {
 body {
     background: rgb(247, 249, 250);
     background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgba(135, 202, 251, 1) 40%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .logo {
@@ -64,3 +66,41 @@ body {
     margin-top: 10vh;
     border-radius: 10px;
 }
+
+/* BREATH TIMER STYLING */
+
+#timer {
+    display: block;
+    font-size: 300px;
+  
+    color: lavender;
+    text-shadow: 2px 2px grey;
+    margin: 0 auto;
+    font-family: 'Titan One', cursive;
+
+}
+
+#timer-page {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15vh;
+    height: 50vh;
+;
+}
+
+#timer-btn {
+    display: block;
+    margin: 0 auto;
+    height: 15vh;
+
+
+}
+
+.dot {
+    display: block;
+    /* height: 40vw; */
+    width: 90vw;
+    background-color: rgb(235, 140, 248);
+    border-radius: 50%;
+    display: inline-block;
+  }
