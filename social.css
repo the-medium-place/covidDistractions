@@ -4,7 +4,7 @@ html, body {
 
 body {
     background: rgb(247, 249, 250);
-    background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgba(135, 202, 251, 1) 40%);
+    background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(193, 131, 252) 40%);
 }
 
 .logo {
@@ -34,9 +34,8 @@ body {
 }
 
 .logo-images {
-    display: block;
     border-radius: 10px;
-    padding-top: 10%;
+    padding-top: 20vh;
 }
 
 .fade-in {
@@ -51,16 +50,14 @@ body {
     100% {
         opacity: 1;
     }
-}
-
-#splash-content {
-    height: 80vh;
-    margin-top: 10vh;
+    
 }
 
 .content-box {
     background-color: rgba(255, 255, 255, 0.904);
+
     height: 30vh;
+
     margin-top: 10vh;
     border-radius: 10px;
 }
