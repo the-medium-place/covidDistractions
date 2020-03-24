@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-    background: rgb(247, 249, 250);
+    background: rgb(8, 99, 145);
     background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(193, 131, 252) 40%);
 }
 
@@ -55,9 +55,35 @@ body {
 
 .content-box {
     background-color: rgba(255, 255, 255, 0.904);
-
-    height: 30vh;
-
-    margin-top: 10vh;
+    /* height: 30vh; */
+    margin: 10vh;
     border-radius: 10px;
+    padding: 2vh;
+    /* width: auto; */
+    
+}
+
+.underline{
+    border-bottom: 5px black solid;
+}
+
+.flex{
+    display:flex;
+    justify-content: start;
+    width:100%
+}
+
+.row-width{
+    /* overflow: scroll; */
+    width: 500%;
+}
+
+@media only screen and (max-width: 500px) {
+    .flex{
+        width: 100%;
+    }
+
+    .content-box{
+        margin-left: 0;
+    }
 }
