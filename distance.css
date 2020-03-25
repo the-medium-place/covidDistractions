@@ -1,20 +1,23 @@
 html, body {
     height: 100%;
+    font-size: 18px;
+    font-weight: bolder;
 }
 
 body {
-    background: rgb(247, 249, 250);
-    background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(148, 148, 148) 40%);
+    /* background: rgb(247, 249, 250); */
+    background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(196, 235, 253) 40%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+header {
+    text-align: center;;
+}
+
 .logo {
-    display: block;
-    position: relative;
-    width: 60%;
-    margin: 0 auto;
-    z-index: 1;
+height: 15vh;
+
 }
 
 .logo-top {
@@ -40,6 +43,12 @@ body {
     padding-top: 20vh;
 }
 
+button {
+    border: 0;
+    background-color: rgb(3, 199, 199);
+    color: white;
+}
+
 .fade-in {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -57,9 +66,30 @@ body {
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.904);
-    height: 30vh;
+    background-color: whitesmoke;
+    height: auto;
     margin-top: 10vh;
     border: 2px solid darkgrey;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px black;
+    padding: 3px;
   
 }
+
+
+
+.content-title {
+    text-align: center;
+    /* max-height: vh; */
+}
+
+summary::-webkit-details-marker {
+    display: none;
+  }
+  summary:focus {
+    outline-style: none;
+  }
+
+  #logo-size {
+      max-width: 80vw;
+  }
