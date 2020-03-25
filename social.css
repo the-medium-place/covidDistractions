@@ -3,21 +3,23 @@ html, body {
 }
 
 body {
-
-    background: rgb(68, 72, 126);
-    /* background: linear-gradient(330deg, rgba(247, 249, 250, 1) 10%, rgb(68, 72, 126) 50%); */
-    background: linear-gradient( -180deg, rgb(68, 72, 126, 1) , rgb(68, 72, 126, 0.7),rgb(68, 72, 126, 1) );
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: linear-gradient( -180deg, rgb(187, 72, 6, 1) , rgb(187, 72, 6, 0.7),rgb(187, 72, 6, 1) );
+    width: 100%;
 }
 
 .logo {
     display: block;
-    position: relative;
+    position: fixed;
     width: 60%;
     margin: 0 auto;
-    z-index: 1;
+    z-index: -1;
+    height: 10vw;
+    width: auto;
 }
 
-.logo-top {
+/* .logo-top {
     display: block;
     position: relative;
     width: 60%;
@@ -38,7 +40,7 @@ body {
 .logo-images {
     border-radius: 10px;
     padding-top: 20vh;
-}
+} */
 
 .fade-in {
     animation: fadeInAnimation ease 3s;
@@ -51,17 +53,16 @@ body {
     }
     100% {
         opacity: 1;
-    }
-    
+    }    
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.904);
+    background-color: rgba(255, 255, 255);
     margin: 3vh 10vh;  
     padding: 2vh;
     box-shadow: 10px 10px 10px black;
-    text-align: center;
-    
+    text-align: center;  
+    opacity: 1;
 }
 
 .underline{
@@ -75,13 +76,37 @@ body {
 }
 
 .row-width{
-    /* overflow: scroll; */
-    /* width: 500%; */
-    /* background: linear-gradient(330deg, rgba(247, 249, 250, 1) 10%, rgb(68, 72, 126) 70%); */
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(187, 72, 6, 0);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(88, 34, 2);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(182, 99, 51);
+  }
+
+.row-big{
+    overflow: hidden;
+    width: 100vw;
 }
 
 .header{
-    margin: 5px;
+    margin: 5vh;
     display: flex;
     justify-content: space-evenly;
     width: 100vw;
@@ -89,35 +114,56 @@ body {
 
 .body-text{
     color: white;
+    width:100%;
 }
 
 .search-button{
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 10px;
 }
 
 .distance-button{
     display: inline-block;
+    background: rgb(255, 255, 255);
 }
 
-@media only screen and (max-width: 1000px) {
+.distance-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
     .flex{
         width: 500vw;
     }
 
-    /* .content-box{
-        margin-left: 0;
-    }
-
     .header{
-        justify-content: start;
+        margin-left: 10vw;
+        display: inline-block;
     }
 
-    .body-text{
-        margin-right: 50vw
+    .distance-form{
+     display: inline-block;
     }
 
-    .distance-button{
-        margin-left: 50vw
-    } */
+    .logo{
+        opacity: 0;
+    }
+
+    .container{
+        overflow: hidden;
+        width: 100vw;
+        margin:0;
+    }
+
+    .row-width{
+        overflow: scroll;
+        overflow-y: hidden;
+        margin: 0;
+    }
 }

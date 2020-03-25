@@ -16,23 +16,25 @@
 </head>
 
 <body>
+    <img class="logo" src="images/sloth-outline.png">
     <div class="header">
-        <form id="movie-form">
+        <form class="distance-form" action="distance.html">
+            <button type="submit" class="distance-button">To Distance</button>
+        </form>
+        <form>
+
             <label class="body-text" for="search-input">What news do you want to see?</label>
             <input type="text" id="search-input"><br>
-            
-            <!-- Button triggers new movie to be added -->
             <input id="search" class="search-button" type="submit" value="Search">
+
         </form>
-        <form action="distance.html">
-            <button type="submit" class="distance-button">Distance</button>
-        </form>
-    </div> 
+    </div>
 
     <div class="container flex">
-        <div class="row row-width search-title">
+        <div class="row row-big search-title">
+
             <h1 class="body-text fade-in">COVID-19 Updates</h1>
-            <div class="row row-width">
+            <div class="row row-width ">
                 <div class="twelve  flex" id="corona"></div>
             </div>
 
