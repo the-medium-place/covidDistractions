@@ -11,6 +11,8 @@ var counterInt;
 
 breatheBtn.on("click", function(){
     $(".drop-button").attr("style", "display: none;");
+    exitBtn.attr("style", "margin-top: 70vh;")
+    $("#breath-splash").attr("style", "display: none;");
     // exitBtnDiv.attr("style", "display: block;");
   
   
@@ -21,14 +23,14 @@ breatheBtn.on("click", function(){
 })
 
 
-exitBtn.on("click", function() {
+// exitBtn.on("click", function() {
 
-    $("#timer-page").removeClass("animate-circle");
-    exitBtnDib.attr("style", "display: none;");
-    timerBtnDiv.attr("style", "display: block;");
-    dotDiv.attr("style", "display: block;");
+//     $("#timer-page").removeClass("animate-circle");
+//     exitBtnDib.attr("style", "display: none;");
+//     timerBtnDiv.attr("style", "display: block;");
+//     dotDiv.attr("style", "display: block;");
 
-})
+// })
 
 
 
@@ -39,9 +41,9 @@ function countUp() {
     var timerPage = $("#timer-page");
     timerPage.addClass("animate-circle");
 
-    $(".inhale").attr("class", "scroll-up");
+    
     $(".inhale").attr("style", "display: block;");
-
+    $(".inhale").addClass("scroll-up");
     function timer() {
         if (counter <4) {
             counter++;
@@ -54,14 +56,15 @@ function countUp() {
         }
     };
     $(".inhale").attr("style", "display: none;");
+   
     $(".inhale").removeClass("scroll-up")
 }
 
 function countDwn() {
     var counterInt = setInterval(timer, 1000);
-    $(".exhale").attr("class", "scroll-down");
+    
     $(".exhale").attr("style", "display: block;");
-
+    $(".exhale").addClass("scroll-down");
     function timer() {
         if (counter > 0){
             counter--;
@@ -73,6 +76,7 @@ function countDwn() {
         }
 };
 $(".exhale").removeClass("scroll-down");
+
 $(".exhale").attr("style", "display: none;");
 
 }

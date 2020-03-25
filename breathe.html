@@ -22,17 +22,37 @@
 <body>
     <div class="container full-height" style="text-align: center;">
         <div class="row">
-            
+
             <div class="twelve columns full-height">
+
+                <!-- round div for dot -->
                 <div class="dot vertical-center" id="timer-page">
 
                 </div>
-                <p class="vertical-center google-font" style="font-size: 300px;"></p>
 
+                <!-- timer text -->
+                <p class="vertical-center google-font" style="font-size: 300px;" id="timer"></p>
+
+                <!-- buttons -->
                 <div class="row vertical-center timer-btns" id="timer-btn">
                     <button class="breath-button animated fadeIn drop-button" id="breathe">breathe</button>
                     <a href="distance.html"><button class="breath-button animated fadeIn" id="exit">return</button></a>
                 </div>
+
+                <!-- explanation box -->
+                <div class="content-box fade-in" style="opacity: .75;" id="breath-splash">
+                    <h3>Welcome to the Easy Breath Timer!</h3>
+                    <p> Just press 'breathe' to start the timer. The circle will grow and shrink in 5 second increments.
+                        Try to slow your breath to match the rhythm of the dot:</p>
+
+                    <span style="color: lightblue;">
+                        <strong>Inhale as it grows
+                    </span> | <span style="color: lightpink;">
+                        Exhale as it shrinks.</strong>
+                    </span>
+                </div>
+
+                <!-- scrolling text? -->
                 <div class="inhale">
                     <h1 class="google-font">inhale</h1>
                 </div>
@@ -40,7 +60,7 @@
                     <h1 class="google-font">exhale</h1>
                 </div>
             </div>
-         
+
 
         </div>
 
