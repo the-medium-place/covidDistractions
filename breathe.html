@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css?family=Titan+One&display=swap" rel="stylesheet">
     <!-- Skeleton CSS Framework Link -->
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="skeleton.css">
@@ -19,15 +20,30 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container full-height" style="text-align: center;">
         <div class="row">
-            <div class="twelve columns">
-                <button id="breathe">breathe</button>
-                <span id="timer"></span>
+            
+            <div class="twelve columns full-height">
+                <div class="dot vertical-center" id="timer-page">
 
+                </div>
+                <p class="vertical-center google-font" style="font-size: 300px;"></p>
 
+                <div class="row vertical-center timer-btns" id="timer-btn">
+                    <button class="breath-button animated fadeIn drop-button" id="breathe">breathe</button>
+                    <a href="distance.html"><button class="breath-button animated fadeIn" id="exit">return</button></a>
+                </div>
+                <div class="inhale">
+                    <h1 class="google-font">inhale</h1>
+                </div>
+                <div class="exhale">
+                    <h1 class="google-font">exhale</h1>
+                </div>
             </div>
+         
+
         </div>
+
 
 
     </div>

@@ -5,6 +5,8 @@ html, body {
 body {
     background: rgb(8, 99, 145);
     background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(193, 131, 252) 40%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .logo {
