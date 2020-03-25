@@ -3,10 +3,10 @@ html, body {
 }
 
 body {
-    background: rgb(8, 99, 145);
-    background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(193, 131, 252) 40%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+
+    background: rgb(68, 72, 126);
+    /* background: linear-gradient(330deg, rgba(247, 249, 250, 1) 10%, rgb(68, 72, 126) 50%); */
+    background: linear-gradient( -180deg, rgb(68, 72, 126, 1) , rgb(68, 72, 126, 0.7),rgb(68, 72, 126, 1) );
 }
 
 .logo {
@@ -57,11 +57,10 @@ body {
 
 .content-box {
     background-color: rgba(255, 255, 255, 0.904);
-    /* height: 30vh; */
-    margin: 10vh;
-    border-radius: 10px;
+    margin: 3vh 10vh;  
     padding: 2vh;
-    /* width: auto; */
+    box-shadow: 10px 10px 10px black;
+    text-align: center;
     
 }
 
@@ -72,20 +71,53 @@ body {
 .flex{
     display:flex;
     justify-content: start;
-    width:100%
+    width:200vw
 }
 
 .row-width{
     /* overflow: scroll; */
-    width: 500%;
+    /* width: 500%; */
+    /* background: linear-gradient(330deg, rgba(247, 249, 250, 1) 10%, rgb(68, 72, 126) 70%); */
 }
 
-@media only screen and (max-width: 500px) {
+.header{
+    margin: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw;
+}
+
+.body-text{
+    color: white;
+}
+
+.search-button{
+    background: white;
+    padding: 10px;
+}
+
+.distance-button{
+    display: inline-block;
+}
+
+@media only screen and (max-width: 1000px) {
     .flex{
-        width: 100%;
+        width: 500vw;
     }
 
-    .content-box{
+    /* .content-box{
         margin-left: 0;
     }
+
+    .header{
+        justify-content: start;
+    }
+
+    .body-text{
+        margin-right: 50vw
+    }
+
+    .distance-button{
+        margin-left: 50vw
+    } */
 }

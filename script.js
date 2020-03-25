@@ -1,4 +1,4 @@
-var userInput = document.querySelector("#search-input");
+// var userInput = document.querySelector("#search-input");
 
 // top News articles in the US//
 // var newsUrl = "http://newsapi.org/v2/top-headlines?country=us&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
@@ -28,7 +28,7 @@ var userInput = document.querySelector("#search-input");
 //topNews();
 
 //news about the covid-19//
-var covidNewsURL = "http://newsapi.org/v2/everything?q=covid19&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
+var covidNewsURL = "https://newsapi.org/v2/everything?q=covid19&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
 function covidNews() {
   $.ajax({
     url: covidNewsURL,
@@ -45,11 +45,11 @@ function covidNews() {
      newH3.text(covidArticles[i].title)
      descriptionP.text(covidArticles[i].description);
      urlP.attr("href", covidArticles[i].url);
-     urlP.text("link")
+     urlP.text("Link to article")
      newDiv.append(newH3);
      newDiv.append(descriptionP);
      newDiv.append(urlP);
-     newDiv.addClass("content-box animated fadeIn")
+     newDiv.addClass("content-box animated slideInRight")
      $("#corona").append(newDiv)
     }
   });
@@ -62,15 +62,17 @@ covidNews();
 function seattleNews() {
   event.preventDefault();
   var userInput = $("#search-input").val()
-  var localNewsURL = "http://newsapi.org/v2/everything?q="+ userInput + "&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
+  var localNewsURL = "https://newsapi.org/v2/everything?q="+ userInput + "&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
   console.log(userInput)
   $("#user-search").empty()
-
+  
   $.ajax({
     url: localNewsURL,
     method: "GET"
   }).then(function (response) {
     var seattleArticles = response.articles;
+    
+  
     for (var i = 0; i < 5; i++) {
       var newDiv = $("<div>")
       var newH3 = $("<h5>");
@@ -80,11 +82,11 @@ function seattleNews() {
      newH3.text(seattleArticles[i].title)
      descriptionP.text(seattleArticles[i].description);
      urlP.attr("href", seattleArticles[i].url);
-     urlP.text("link")
+     urlP.text("Link to article")
      newDiv.append(newH3);
      newDiv.append(descriptionP);
      newDiv.append(urlP);
-     newDiv.addClass("content-box animated fadeIn")
+     newDiv.addClass("content-box animated slideInRight")
      $("#user-search").append(newDiv)
       // console.log(seattleArticles[i].title);
       // console.log(seattleArticles[i].description);
