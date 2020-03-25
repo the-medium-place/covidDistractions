@@ -224,7 +224,7 @@ body {
     -moz-animation: scroll-up 5s linear 1;
     -webkit-animation: scroll-up 5s linear 1;
     animation: scroll-up 5s linear 1;
-    animation-delay: 1s
+    /* animation-delay: 1s */
 }
 
 /* Move it (define the animation) */
@@ -279,7 +279,7 @@ body {
     -moz-animation: scroll-down 5s linear 1;
     -webkit-animation: scroll-down 5s linear 1;
     animation: scroll-down 5s linear 1;
-    animation-delay: 1s;
+    /* animation-delay: 1s; */
 }
 
 /* Move it (define the animation) */
