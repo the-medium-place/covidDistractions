@@ -4,7 +4,9 @@ html, body {
 
 body {
     background: rgb(247, 249, 250);
-    background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(253, 57, 57) 40%);
+    background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(148, 148, 148) 40%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .logo {
