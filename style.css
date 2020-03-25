@@ -41,19 +41,7 @@ body {
     padding-top: 10%;
 }
 
-.fade-in {
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
+
 
 #splash-content {
     height: 80vh;
@@ -72,35 +60,133 @@ body {
 #timer {
     display: block;
     font-size: 300px;
-  
-    color: lavender;
+    color: rgba(230, 230, 250);
     text-shadow: 2px 2px grey;
-    margin: 0 auto;
     font-family: 'Titan One', cursive;
-
+    opacity: .65;
 }
 
-#timer-page {
-    display: block;
-    margin: 0 auto;
-    margin-top: 15vh;
-    height: 50vh;
-;
+#exit-btn {
+    display: none;
 }
+
 
 #timer-btn {
     display: block;
-    margin: 0 auto;
+    
     height: 15vh;
-
-
+  
 }
 
 .dot {
     display: block;
-    /* height: 40vw; */
-    width: 90vw;
+    left: auto;
+    height: 45px;
+    width: 45px;
     background-color: rgb(235, 140, 248);
     border-radius: 50%;
     display: inline-block;
-  }
+    margin: 0 auto;
+ 
+}
+
+.breath-button {
+    
+    color: white;
+    font-weight: bolder;
+    background-color: aqua;
+    width: 80%;
+    margin: 3px;
+    position: relative;
+    margin-top: 50vh;
+    /* bottom: 0; */
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.animate-circle {
+    height: 50%;
+    background-color: rgb(235, 140, 248);
+    animation-name: grow;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+
+@keyframes grow {
+    10% {
+        /* background-color: blue; */
+        height: 20%;
+        width: 20%;
+    }
+    20% {
+        /* background-color: blue; */
+        height: 40%;
+        width: 40%;
+    }
+    30% {
+        /* background-color: blue; */
+        height: 60%;
+        width: 60%;
+    }
+    40% {
+        /* background-color: green; */
+        height: 80%;
+        width: 80%;
+    }
+    50% {
+        /* background-color: blue; */
+        height: 90%;
+        width: 90%;
+    }
+    60% {
+        /* background-color: purple; */
+        height: 80%;
+        width: 80%;
+    }
+    70% {
+        /* background-color: blue; */
+        height: 60%;
+        height: 60%;
+    }
+    80% {
+        /* background-color: yellow; */
+        height: 40%;
+        width: 40%;
+    }
+    90% {
+        /* background-color: yellow; */
+        height: 20%;
+        width: 20%;
+    }
+    100% {
+        /* background-color: yellow; */
+        height: 20%;
+        width: 20%;
+    }
+}
+
+.fade-in {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

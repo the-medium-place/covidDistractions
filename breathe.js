@@ -1,48 +1,38 @@
 var breatheBtn = $("#breathe");
-var timerSpan = $("#timer")
-
-var counterBool = true;
-var counterInt;
-breatheBtn.on("click", countUp);
-
-
-// function myTimer() {
-//     var timer = setInterval(timer, 1300);
-
-//     // !** MAIN BREATH TIMER **! //
-//     var counter = 0;
-
-//     // COUNTER COUNTS AND LINKS TO TEXT ON PAGE
-//     function timer() {
-
-//         do {
-//             if (counter < 5) {
-//                 counter++;
-//                 timerSpan.text(counter);
-//             } else {
-//                 clearInterval();
-//                 counterBool = false;
-//             }
-//         } while (counterBool === true)
-
-//         do {
-//             if (counter > 0) {
-//                 counter--;
-//                 timerSpan.text(counter);
-//             } else {
-//                 counterBook = true;
-//             }
-//         } while (counterBool === false);
-
-
-//     }
-
-// }
+var timerSpan = $("#timer");
+var timerBtnDiv = $("#timer-btn");
+var exitBtnDiv = $("#exit-btn");
+var exitBtn = $("#exit");
 var counter = 0;
-function countUp() {
-    var counterInt = setInterval(timer, 1300);
 
-   
+var counterInt;
+
+
+breatheBtn.on("click", function(){
+    timerBtnDiv.attr("style", "display: none;");
+    exitBtnDiv.attr("style", "display: block;")
+
+    countUp();
+
+})
+
+
+exitBtn.on("click", function() {
+
+    $("#timer-page").removeClass("animate-circle");
+    exitBtnDib.attr("style", "display: none;");
+    timerBtnDiv.attr("style", "display: block;");
+
+})
+
+
+
+
+function countUp() {
+    var counterInt = setInterval(timer, 1000);
+
+    var timerPage = $("#timer-page");
+    timerPage.addClass("animate-circle");
 
     function timer() {
         if (counter <4) {
@@ -58,7 +48,7 @@ function countUp() {
 }
 
 function countDwn() {
-    var counterInt = setInterval(timer, 1300);
+    var counterInt = setInterval(timer, 1000);
 
     function timer() {
         if (counter > 0){
@@ -72,5 +62,3 @@ function countDwn() {
 }
 
 }
-
-// define function for counter outside of event then functions call each other
