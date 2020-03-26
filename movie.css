@@ -75,7 +75,7 @@ button {
 .flex {
     display: flex;
     justify-content: start;
-    
+
 }
 
 .row-width {
@@ -157,3 +157,6 @@ button {
     max-width: 200px;
 }
 
+.linkDiv{
+    z-index: 1;
+}
