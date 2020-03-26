@@ -1,6 +1,6 @@
-html, body {
+/* html, body {
     height: 100%;
-}
+} */
 
 body {
     overflow-y: scroll;
@@ -63,6 +63,7 @@ body {
     box-shadow: 10px 10px 10px black;
     text-align: center;  
     opacity: 1;
+    
 }
 
 .underline{
@@ -72,7 +73,7 @@ body {
 .flex{
     display:flex;
     justify-content: start;
-    width:100vw
+    width:300vw
 }
 
 .row-width{
@@ -102,7 +103,7 @@ body {
 
 .row-big{
     overflow: hidden;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 .header{
