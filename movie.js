@@ -1,4 +1,8 @@
-var movie = 'titanic';
+
+
+
+var movie = "titanic";
+
 
 function MDBQuery() {
     var queryURLmovie = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy"
@@ -19,7 +23,7 @@ function MDBQuery() {
         newDiv.append(imdbInfoP);
         newDiv.append(ratingP);
         newDiv.append(plotP);
-        newDiv.addClass("content-box animated slideInRight")
+        newDiv.addClass("content-box animated fadeIn")
         $("#corona").append(newDiv)
     });
 };
@@ -58,13 +62,19 @@ function streamQuery() {
             newDiv.append(serviceP);
             newDiv.append(newImg);
             // newDiv.append(urlP);
-            newDiv.addClass("content-box animated slideInRight")
+            newDiv.addClass("content-box animated fadeIn")
             $("#user-search").append(newDiv)
         };
     });
 
 
 };
+
+
+
+
+
+
 
 MDBQuery();
 streamQuery();
