@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+
+   
+
+        <!-- Skeleton CSS Framework Link -->
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="skeleton.css">
+        <!-- Animate: CSS Link -->
+        <link rel="stylesheet" href="animate.css">
+        <!-- CSS link -->
+        <link rel="stylesheet" href="movie.css">
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <img src="./images/movies-logo.png" alt="movies">
+        <br>
+        <img src="./images/sloth-outline.png" alt="sloth" class="logo">
+        <br>
+        <form id="movie-form">
+            <label class="body-text" for="search-input">Find something to watch!</label>
+            <input type="text" id="search-input" placeholder="Movie name"><br>
+            
+            <!-- Button triggers new movie to be added -->
+            <button id="search" class="search-button" type="submit" value="Search">search</button>
+ 
+        </form>
+
+    </header> 
+    
+    <!-- Movie title, rating, plot -->
+    <div class="container">
+        <div class="row row-width">
+            <span class="fade-in"><img src="./images/your-search-logo.png" alt="Your Search Result" class="movie-logo"></span>
+
+            <div class="row row-width">
+                <div class="twelve flex" id="IMDB"></div>
+            </div>
+        </div>
+        <div class="row row-width">
+            <!-- <h3 class="body-text fade-in">Things to watch:</h3> -->
+
+
+            <span class="fade-in"><img src="./images/scroll-right-logo.png" alt="Your Search Result" class="movie-logo"></span>
+
+            <div class="row row-width">
+                <div class="ten columns flex" id="stream"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    </div>
+    <div class="btn-container">
+    <form action="distance.html">
+        <button type="submit" class="distance-button">Distance Hub</button>
+    </form>
+</div>
+    <!-- Find where you can stream it -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="movie.js"></script>
+</body>
+
+</html>
