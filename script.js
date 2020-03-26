@@ -63,8 +63,8 @@ function seattleNews() {
   event.preventDefault();
   var userInput = $("#search-input").val()
   var localNewsURL = "http://newsapi.org/v2/everything?q="+ userInput + "&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
-  console.log(userInput)
-  $("#user-search").empty()
+  console.log(userInput);
+  $("#user-search").empty();
 
   $.ajax({
     url: localNewsURL,
@@ -72,7 +72,7 @@ function seattleNews() {
   }).then(function (response) {
     var seattleArticles = response.articles;
     for (var i = 0; i < 5; i++) {
-      var newDiv = $("<div>")
+      var newDiv = $("<div>");
       var newH3 = $("<h5>");
       var descriptionP = $("<p>");
       var urlP = $("<a>");
@@ -80,12 +80,12 @@ function seattleNews() {
      newH3.text(seattleArticles[i].title)
      descriptionP.text(seattleArticles[i].description);
      urlP.attr("href", seattleArticles[i].url);
-     urlP.text("link")
+     urlP.text("link");
      newDiv.append(newH3);
      newDiv.append(descriptionP);
      newDiv.append(urlP);
-     newDiv.addClass("content-box animated fadeIn")
-     $("#user-search").append(newDiv)
+     newDiv.addClass("content-box animated fadeIn");
+     $("#user-search").append(newDiv);
       // console.log(seattleArticles[i].title);
       // console.log(seattleArticles[i].description);
       // console.log(seattleArticles[i].source.name);
