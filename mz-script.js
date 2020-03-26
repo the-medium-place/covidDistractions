@@ -50,6 +50,9 @@ var localNews="http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44e
     var listI4=$("<li>");
     var listI5=$("<li>");
     var vidUrl=$("<a>");
+    var vidUrl3=$("<a>");
+    var vidUrl4=$("<a>");
+
     
     var gameResults = response.results[0];
     var game2= response.results[1];
@@ -66,11 +69,7 @@ var localNews="http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44e
     var gameName3= game3.name;
     var gameName4= game4.name;
     var gameName5= game5.name;
-    // console.log(gameName);
-    // console.log(gameName2);
-    // console.log(gameName3);
-    // console.log(gameName4);
-    // console.log(gameName5);
+    
     gameList.append(listI1);
     gameList.append(listI2);
     gameList.append(listI3);
@@ -97,15 +96,44 @@ var localNews="http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44e
       
       // var gameConsole=gameResults.platforms.platform;
       var gameVid=gameResults.clip.clip;
+      // var gameVid2=game2.clip.clip;
+      var gameVid3=game3.clip.clip;
+      var gameVid4=game4.clip.clip;
+      var gameVid5=game5.clip.clip;
+
+
+      console.log(gameVid3);
+      console.log(gameVid4);
+
+
       var gameRating= " | Rating: " + gameResults.rating;
+      
+      
+      
+      
+    vidUrl.attr("href", gameVid);
+    vidUrl.text(gameName);
+    listI1.append(vidUrl);
+
+    // vidUrl2.attr("href", gameVid2);
+    // vidUrl2.text(gameName2);
+    // listI2.append(vidUrl2);
+          
+    vidUrl3.attr("href", gameVid3);
+    vidUrl3.text(gameName3);
+    listI3.append(vidUrl3);
+
+    vidUrl4.attr("href", gameVid4);
+    vidUrl4.text(gameName4);
+    listI4.append(vidUrl4);
+
+    vidUrl5.attr("href", gameVid5);
+    vidUrl5.text(gameName5);
+    listI5.append(vidUrl5);
+  
 
  
     
-    
-
-      vidUrl.attr("href", gameVid);
-      vidUrl.text("Clip");
-      gameList.append(vidUrl);
     
   
   
@@ -122,16 +150,26 @@ var localNews="http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44e
   
       
     });
+    // // var giantBombUrl= "https://www.giantbomb.com/api/reviews/?api_key=658189deaf2d44e2844c10f9832acbcc8f09ee43";
+
+    // function videoGameArticles(){
+
+
+    //   $.ajax({
+    //     url: giantBombUrl,
+    //     method:"GET"
+    //   }).then(function(response){
+    //     console.log(response);
+
+
+
     
       
     
-    
+    //   }
   
   
   
-  // });
+    //   );}
+    //   videoGameArticles();
   
-  
-
-
-
