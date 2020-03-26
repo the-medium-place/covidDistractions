@@ -20,7 +20,7 @@ body {
 .logo-top {
     display: block;
     position: relative;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: -10%;
     z-index: 2;
@@ -29,7 +29,7 @@ body {
 .logo-bottom {
     display: block;
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-top: -10%;
     z-index: 2;
@@ -39,6 +39,8 @@ body {
     display: block;
     border-radius: 10px;
     padding-top: 10%;
+
+    margin-bottom: 15px;
 }
 
 #splash-content {
@@ -53,17 +55,21 @@ body {
     border-radius: 10px;
 }
 
+.main-splash {
+    padding: 5px;
+    font-size: 18px;
+    height: auto;
+    background-color: rgb(0, 0, 0, 0);
+    margin-top: -20px
+}
+
+.splash-img {
+    height: 18px;
+
+}
+
 /* BREATH TIMER STYLING */
 
-/* 
-#timer {
-    display: block;
-    font-size: 300px;
-    color: rgba(230, 230, 250);
-    text-shadow: 2px 2px grey;
- 
-    opacity: .65;
-} */
 
 .google-font {
     display: block;
