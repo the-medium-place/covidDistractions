@@ -1,11 +1,8 @@
-
 var movie = 'Goodfellas'
 var searchBTN = $("#search");
 var searchFieldEl = $("#search-input");
 var imdbEL = $("#IMDB");
 var streamEL = $("#stream");
-
-
 
 //button click
 //clear content for subsequent search
@@ -36,11 +33,9 @@ function MDBQuery() {
         newIMG.attr("src", response.Poster);
         newDiv.append(newH3);
         newDiv.append(imdbInfoP);
-
         newDiv.append(newIMG);
         newDiv.addClass("content-box animated slideInRight")
-        imdbEL.append(newDiv)
-
+        imdbEL.append(newDiv);
     });
 };
 
@@ -70,6 +65,7 @@ function streamQuery() {
             var newImg = $("<img class = 'poster'>");
             newH3.text(response.results[i].name);
             serviceA.attr("href", response.results[i].locations[0].url);
+            serviceA.attr("target", "blank");
             newIcon.attr("src", response.results[i].locations[0].icon);
             newImg.attr("src", response.results[i].picture);
             newDiv.append(newH3);
@@ -77,10 +73,8 @@ function streamQuery() {
             newP.append(serviceA);
             newDiv.append(newP);
             newDiv.append(newImg);
-
-            newDiv.addClass("content-box animated slideInRight")
+            newDiv.addClass("content-box animated slideInRight linkDiv");
             streamEL.append(newDiv)
-
         };
     });
 };

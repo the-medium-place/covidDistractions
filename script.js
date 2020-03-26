@@ -36,12 +36,17 @@ function seattleNews() {
   console.log(userInput)
   $("#user-search").empty()
   
-
+  
   $.ajax({
     url: localNewsURL,
     method: "GET"
   }).then(function (response) {
     var seattleArticles = response.articles;
+    var newPNG = $("<img>");
+    newPNG.attr("src", "./images/social-your-search-logo.png" );
+    newPNG.addClass("logo-top")
+    // newH1Header.addClass("body-text")
+    $(".row-big").prepend(newPNG);
     
   
     for (var i = 0; i < 5; i++) {

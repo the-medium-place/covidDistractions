@@ -31,13 +31,15 @@ button {
 
 .logo {
     display: block;
-    position: fixed;
+    /* position: fixed; */
     width: 60%;
     margin: 0 auto;
     z-index: -1;
     height: 10vw;
     width: auto;
+    margin-top: -20px;
 }
+
 
 .fade-in {
     animation: fadeInAnimation ease 3s;
@@ -73,7 +75,7 @@ button {
 .flex {
     display: flex;
     justify-content: start;
-    width: 100vw
+
 }
 
 .row-width {
@@ -155,3 +157,6 @@ button {
     max-width: 200px;
 }
 
+.linkDiv{
+    z-index: 1;
+}
