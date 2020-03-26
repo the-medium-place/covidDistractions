@@ -72,7 +72,7 @@ body {
 .flex{
     display:flex;
     justify-content: start;
-    width:200vw
+    width:100vw
 }
 
 .row-width{
@@ -106,10 +106,10 @@ body {
 }
 
 .header{
-    margin: 5vh;
+    padding: 5vh;
     display: flex;
     justify-content: space-evenly;
-    width: 100vw;
+    width: 95vw;
 }
 
 .body-text{

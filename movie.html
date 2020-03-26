@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Search</title>
-    <link rel="stylesheet" href= "distance.css">
+   
 
         <!-- Skeleton CSS Framework Link -->
         <link rel="stylesheet" href="normalize.css">
@@ -12,38 +12,44 @@
         <!-- Animate: CSS Link -->
         <link rel="stylesheet" href="animate.css">
         <!-- CSS link -->
-        <link rel="stylesheet" href="distance.css">
+        <link rel="stylesheet" href="movie.css">
 </head>
 <body>
+
     <div class="header">
+        <img src="./images/movies-logo.png" alt="movies" style="width: 50%;">
+        <br>
         <form id="movie-form">
             <label class="body-text" for="search-input">Find something to watch!</label>
             <input type="text" id="search-input" placeholder="Movie name"><br>
             
             <!-- Button triggers new movie to be added -->
-            <input id="search" class="search-button" type="submit" value="Search">
+            <button id="search" class="search-button" type="submit" value="Search">search</button>
         </form>
-        <form action="distance.html">
-            <button type="submit" class="distance-button">Distance</button>
-        </form>
+
     </div> 
     
     <!-- Movie title, rating, plot -->
     <div class="container flex">
         <div class="row row-width search-title">
-            <h1 class="body-text fade-in">COVID-19 Updates</h1>
+            <span class="fade-in"><img src="./images/your-search-logo.png" alt="Your Search Result" class="movie-logo"></span>
             <div class="row row-width">
                 <div class="twelve  flex" id="corona"></div>
             </div>
 
-            <h1 class="body-text">Your Search</h1>
+            <span class="fade-in"><img src="./images/scroll-right-logo.png" alt="Your Search Result" class="movie-logo"></span>
             <div class="row row-width">
                 <div class="twelve flex" id="user-search"></div>
             </div>
 
         </div>
-    </div>
 
+    </div>
+    <div class="btn-container">
+    <form action="distance.html">
+        <button type="submit" class="distance-button">Distance Hub</button>
+    </form>
+</div>
     <!-- Find where you can stream it -->
 
 
