@@ -11,7 +11,7 @@ body {
 }
 
 .logo {
-    display: block;
+    /* display: block; */
     position: fixed;
     width: 60%;
     margin: 0 auto;
@@ -74,7 +74,9 @@ body {
 .flex{
     display:flex;
     justify-content: start;
-    width:300vw
+    width:300vw;
+    overflow: hidden;
+
 }
 
 .row-width{
@@ -104,7 +106,7 @@ body {
 
 .row-big{
     overflow: hidden;
-    /* width: 100vw; */
+    width: 100vw;
 }
 
 .header{
@@ -137,7 +139,8 @@ body {
 }
 
 .container{
-    width: 100%;
+    width: 100vw;
+    overflow: hidden;
 }
 
 @media only screen and (max-width: 450px){
@@ -153,6 +156,7 @@ body {
 @media only screen and (max-width: 1024px) {
     .flex{
         width: 500vw;
+        overflow: hidden;
     }
 
     .header{
@@ -171,7 +175,7 @@ body {
 
     .container{
         overflow-y: hidden;
-        /* width: 100vw; */
+        width: 100vw;
         margin:0;
     }
 
