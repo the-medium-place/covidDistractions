@@ -1,12 +1,13 @@
-/* html, body {
-    height: 100%;
-} */
+html, body {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     overflow-y: scroll;
     overflow-x: hidden;
-    background: linear-gradient( -180deg, rgb(187, 72, 6, 1) , rgb(187, 72, 6, 0.7),rgb(187, 72, 6, 1) );
-    width: 100%;
+    background: linear-gradient( -180deg, rgb(102, 95, 124) , rgb(102, 95, 124, 0.7),rgb(102, 95, 124, 1) );
 }
 
 .logo {
@@ -19,28 +20,28 @@ body {
     width: auto;
 }
 
-/* .logo-top {
-    display: block;
-    position: relative;
+.logo-top {
+    /* display: block; */
+    /* position: relative; */
     width: 60%;
     margin: 0 auto;
-    margin-bottom: -10%;
+    /* margin-bottom: -10%; */
     z-index: 2;
 }
 
-.logo-bottom {
+/* .logo-bottom {
     display: block;
     position: relative;
     width: 80%;
     margin: 0 auto;
     margin-top: -10%;
     z-index: 2;
-}
+} */
 
-.logo-images {
+/* .logo-images {
     border-radius: 10px;
     padding-top: 20vh;
-} */
+}  */
 
 .fade-in {
     animation: fadeInAnimation ease 3s;
@@ -110,7 +111,8 @@ body {
     padding: 5vh;
     display: flex;
     justify-content: space-evenly;
-    width: 95vw;
+    /* width: 95vw; */
+    margin:0;
 }
 
 .body-text{
@@ -138,18 +140,29 @@ body {
     width: 100%;
 }
 
+@media only screen and (max-width: 450px){
+    .logo-top{
+        display: block;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    /* margin-bottom: -10%; */
+    z-index: 2; 
+    }
+}
 @media only screen and (max-width: 1024px) {
     .flex{
         width: 500vw;
     }
 
     .header{
-        margin-left: 10vw;
+        /* margin-left: 10vw; */
         display: inline-block;
     }
 
     .distance-form{
      display: inline-block;
+     margin: 0;
     }
 
     .logo{
@@ -157,8 +170,8 @@ body {
     }
 
     .container{
-        overflow: hidden;
-        width: 100vw;
+        overflow-y: hidden;
+        /* width: 100vw; */
         margin:0;
     }
 
@@ -167,4 +180,5 @@ body {
         overflow-y: hidden;
         margin: 0;
     }
+
 }
