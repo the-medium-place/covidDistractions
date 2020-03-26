@@ -5,6 +5,8 @@ html, body {
 body {
     background: rgb(247, 249, 250);
     background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgba(135, 202, 251, 1) 40%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .logo {
@@ -18,7 +20,7 @@ body {
 .logo-top {
     display: block;
     position: relative;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: -10%;
     z-index: 2;
@@ -27,7 +29,7 @@ body {
 .logo-bottom {
     display: block;
     position: relative;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-top: -10%;
     z-index: 2;
@@ -37,20 +39,8 @@ body {
     display: block;
     border-radius: 10px;
     padding-top: 10%;
-}
 
-.fade-in {
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    margin-bottom: 15px;
 }
 
 #splash-content {
@@ -64,3 +54,274 @@ body {
     margin-top: 10vh;
     border-radius: 10px;
 }
+
+.main-splash {
+    padding: 5px;
+    font-size: 18px;
+    height: auto;
+    background-color: rgb(0, 0, 0, 0);
+    margin-top: -20px
+}
+
+.splash-img {
+    height: 18px;
+
+}
+
+/* BREATH TIMER STYLING */
+
+
+.google-font {
+    display: block;
+    color: rgba(230, 230, 250);
+    text-shadow: 2px 2px grey;
+    opacity: .65;
+    font-family: 'Titan One', cursive;
+}
+
+#exit-btn {
+    display: block;
+    position: relative;
+    height: 15vh;
+    /* margin-top: 40vh; */
+}
+
+.timer-btns {
+    margin-top: 500px;
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(235, 140, 248);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 auto;
+    right: 0px;
+    left: 0px;
+}
+
+.inhale {
+    display: none;
+}
+
+.exhale {
+    display: none;
+}
+
+#timer-page {
+    margin: 0 auto;
+}
+
+.breath-button {
+    border: 0;
+    color: white;
+    font-weight: bolder;
+    background-color: aqua;
+    width: 80%;
+    margin: 3px;
+    display: block;
+    position: relative;
+    margin: 3px auto;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.animate-circle {
+ 
+    background-color: rgb(235, 140, 248);
+
+    animation-delay: 1s;
+    animation: grow 10s linear infinite;
+}
+
+@keyframes grow {
+    10% {
+        background-color: rgb(235, 140, 248);
+        height: 70px;
+        width: 70px;
+    }
+    20% {
+        background-color: rgb(205, 140, 248);
+        height: 100px;
+        width: 100px;
+    }
+    30% {
+        background-color: rgb(173, 140, 248);
+        height: 175px;
+        width: 175px;
+    }
+    40% {
+        background-color: rgb(182, 140, 248);
+        height: 275px;
+        width: 275px;
+    }
+    50% {
+        background-color: rgb(235, 140, 248);
+        height: 350px;
+        width: 350px;
+    }
+    60% {
+        background-color: rgb(200, 140, 248);
+        height: 275px;
+        width: 275px;
+    }
+    70% {
+        background-color: rgb(140, 147, 248);
+        height: 175px;
+        width: 175px;
+    }
+    80% {
+        background-color: rgb(151, 140, 248);
+        height: 100px;
+        width: 100px;
+    }
+    90% {
+        background-color: rgb(182, 140, 248);
+        height: 70px;
+        width: 70px;
+    }
+    100% {
+        background-color: rgb(230, 140, 248);
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.fade-in {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.scroll-up {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    /* Apply animation to this element */
+    -moz-animation: scroll-up 5s linear 1;
+    -webkit-animation: scroll-up 5s linear 1;
+    animation: scroll-up 5s linear 1;
+    /* animation-delay: 1s */
+}
+
+/* Move it (define the animation) */
+
+@-moz-keyframes scroll-up {
+    0% {
+        -moz-transform: translateY(100%);
+    }
+    100% {
+        -moz-transform: translateY(-100%);
+    }
+}
+
+@-webkit-keyframes scroll-up {
+    0% {
+        -webkit-transform: translateY(100%);
+    }
+    100% {
+        -webkit-transform: translateY(-100%);
+    }
+}
+
+@keyframes scroll-up {
+    0% {
+        -moz-transform: translateY(100%);
+        /* Browser bug fix */
+        -webkit-transform: translateY(100%);
+        /* Browser bug fix */
+        transform: translateY(100%);
+    }
+    100% {
+        -moz-transform: translateY(-100%);
+        /* Browser bug fix */
+        -webkit-transform: translateY(-100%);
+        /* Browser bug fix */
+        transform: translateY(-100%);
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    /* Apply animation to this element */
+    -moz-animation: scroll-down 5s linear 1;
+    -webkit-animation: scroll-down 5s linear 1;
+    animation: scroll-down 5s linear 1;
+    /* animation-delay: 1s; */
+}
+
+/* Move it (define the animation) */
+
+@-moz-keyframes scroll-down {
+    0% {
+        -moz-transform: translateY(-100%);
+    }
+    100% {
+        -moz-transform: translateY(100%);
+    }
+}
+
+@-webkit-keyframes scroll-down {
+    0% {
+        -webkit-transform: translateY(-100%);
+    }
+    100% {
+        -webkit-transform: translateY(100%);
+    }
+}
+
+@keyframes scroll-down {
+    0% {
+        -moz-transform: translateY(-100%);
+        /* Browser bug fix */
+        -webkit-transform: translateY(-100%);
+        /* Browser bug fix */
+        transform: translateY(-100%);
+    }
+    100% {
+        -moz-transform: translateY(100%);
+        /* Browser bug fix */
+        -webkit-transform: translateY(100%);
+        /* Browser bug fix */
+        transform: translateY(100%);
+    }
+}
+
