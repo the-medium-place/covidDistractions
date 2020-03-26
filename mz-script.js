@@ -66,11 +66,7 @@ var localNews="http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44e
     var gameName3= game3.name;
     var gameName4= game4.name;
     var gameName5= game5.name;
-    // console.log(gameName);
-    // console.log(gameName2);
-    // console.log(gameName3);
-    // console.log(gameName4);
-    // console.log(gameName5);
+    
     gameList.append(listI1);
     gameList.append(listI2);
     gameList.append(listI3);
@@ -97,14 +93,19 @@ var localNews="http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44e
       
       // var gameConsole=gameResults.platforms.platform;
       var gameVid=gameResults.clip.clip;
+      var gameVid2=gameResults[1].clip.clip;
       var gameRating= " | Rating: " + gameResults.rating;
+      
+
+
+
 
  
     
     
 
       vidUrl.attr("href", gameVid);
-      vidUrl.text("Clip");
+      vidUrl.text("Clip1");
       gameList.append(vidUrl);
     
   
@@ -122,6 +123,9 @@ var localNews="http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44e
   
       
     });
+    var gameSpotUrl= "https://www.gamespot.com/api/articles/&format=publish_date:2020?api_key=481d777bc7c84b3483d92e2ccf4bec23113e2032";
+
+
     
       
     
