@@ -151,3 +151,7 @@ button {
     z-index: 5;
 }
 
+.poster {
+    max-width: 200px;
+}
+
