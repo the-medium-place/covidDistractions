@@ -1,7 +1,8 @@
 html, body {
-    height: 100%;
+    
     font-size: 18px;
     font-weight: bolder;
+
 }
 
 body {
@@ -9,15 +10,23 @@ body {
     background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(196, 235, 253) 40%);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /* height: 100%; */
 }
 
 header {
     text-align: center;;
 }
 
-.logo {
-height: 15vh;
 
+.logo {
+    display: block;
+    /* position: fixed; */
+    width: 60%;
+    margin: 0 auto;
+    z-index: -1;
+    height: 10vw;
+    width: auto;
+    margin-top: -20px;
 }
 
 .logo-top {
@@ -72,14 +81,20 @@ button {
     border: 2px solid darkgrey;
     border-radius: 10px;
     box-shadow: 10px 10px 10px black;
-    padding: 3px;
+    padding: 6px;
+    text-align: center;
   
+}
+
+.content-img {
+    max-width: 80%;
 }
 
 
 
 .content-title {
     text-align: center;
+   
     /* max-height: vh; */
 }
 

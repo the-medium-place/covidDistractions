@@ -3,39 +3,41 @@ html, body {
 }
 
 body {
-    background: rgb(3, 72, 107);
-    background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgb(33, 61, 97) 40%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: rgb(247, 249, 250);
+    background: linear-gradient(330deg, rgba(247, 249, 250, 1) 0%, rgba(135, 202, 251, 1) 40%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    display: block;
+    position: relative;
+   
 }
+
+button {
+    border: 0;
+    color: white;
+    font-weight: bolder;
+    background-color: aqua;
+    width: 80%;
+    margin: 3px;
+    display: block;
+    position: relative;
+    margin: 3px auto;
+}
+
+
 
 .logo {
     display: block;
-    position: relative;
+    /* position: fixed; */
     width: 60%;
     margin: 0 auto;
-    z-index: 1;
-}
-
-.logo-top {
-    display: block;
-    position: relative;
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: -10%;
-    z-index: 2;
-}
-
-.logo-bottom {
-    display: block;
-    position: relative;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: -10%;
-    z-index: 2;
-}
-
-.logo-images {
-    border-radius: 10px;
-    padding-top: 20vh;
+    z-index: -1;
+    height: 10vw;
+    width: auto;
+    margin-top: -30px;
 }
 
 .fade-in {
@@ -51,17 +53,106 @@ body {
     100% {
         opacity: 1;
     }
-    
 }
 
 .content-box {
-    background-color: rgba(255, 255, 255, 0.904);
-    height: 30vh;
-    margin-top: 10vh;
-    border: 2px solid darkgrey;
-  
+    position: relative;
+    background-color: rgba(255, 255, 255);
+    margin: 3vh 10vh;
+    padding: 2vh;
+    box-shadow: 3px 3px 3px rgb(77, 76, 76);
+    text-align: center;
+    opacity: 1;
+    border-radius: 10px;
+    z-index: -5;
 }
-#top-games{
-    content: normal;
-    padding-left: 0%;
+
+.underline {
+    border-bottom: 5px black solid;
 }
+
+.flex {
+    display: flex;
+    justify-content: start;
+    width: 100vw
+}
+
+.row-width {
+    overflow: scroll;
+    overflow-y: hidden;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: rgba(252, 251, 250, 0);
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(177, 69, 248);
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(71, 51, 182);
+}
+
+.row-big {
+    overflow: hidden;
+    width: 100vw;
+}
+
+.header {
+    text-align: center;
+    /* width: 95vw; */
+    padding-top: 5px;
+}
+
+.body-text {
+    color: white;
+    width: 100%;
+}
+
+
+.distance-button {
+    text-align: center;
+    display: inline-block;
+    width: 80%;
+   
+} 
+
+.distance-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    
+}
+
+.btn-container {
+    width: 100%;
+    text-align: center;
+}
+
+.movie-logo {
+    max-width: 70%;
+    margin-bottom: -60px;
+    z-index: 5;
+}
+
+.poster {
+    max-width: 200px;
+}
+
