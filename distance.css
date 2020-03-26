@@ -93,3 +93,27 @@ summary::-webkit-details-marker {
   #logo-size {
       max-width: 80vw;
   }
+  /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgba(187, 72, 6, 0);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(88, 34, 2);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(182, 99, 51);
+  }
+
+  .poster{
+      width: 300px;
+      height: auto;
+  }
