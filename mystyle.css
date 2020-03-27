@@ -14,7 +14,12 @@ body {
     position: relative;
    
 }
+p{
+    
+    font-size: 25px;
+    font-weight: bold;
 
+}
 button {
     border: 0;
     color: white;

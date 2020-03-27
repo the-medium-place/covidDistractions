@@ -8,8 +8,6 @@ $.ajax({
 
 });
 
-
-
 //news about the covid-19//
 var covidNews = "http://newsapi.org/v2/everything?q=covid19&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
 $.ajax({
@@ -20,12 +18,8 @@ $.ajax({
 
 });
 
-
-
-
 //seattle news//
 var localNews = "http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
-
 
 //query IMDB by title
 function videoGame() {
@@ -39,48 +33,55 @@ function videoGame() {
       console.log("joe wuz here");
       console.log(response.results[i]);
       var gameDiv = $("#game-div");
-     
-      
 
       // var gameRating= " | Rating: " + response.results[i].rating;
       var newDiv = $("<div class='content-box animated slideInRight'>");
       var newH3 = $("<h3>");
       var ratingInfoP = $("<p>");
-      var esrbRate = $("<p>");
+
+      //if statement to get the vid clips of the object
       if (response.results[i].clip) {
         var video = $('<video />', {
           id: 'video',
+          poster: response.results[i].background_image,
           src: response.results[i].clip.clip,
           type: 'video/mp4',
-          controls: true
+          controls: true,
         });
-        //else show jpeg?
+        console.log('inside if statement');
+        console.log(response.results[i].clip.clip);
 
-      var serviceA = $("<a>");
-      
-      
-        console.log('inside if statement')
-        console.log(response.results[i].clip.clip)
         video.attr("href", response.results[i].clip.clip);
         newDiv.append(video);
+
+      } else {
+        var img = $('<img>');
+        $(img).width(640);
+        $(img).height(360);
+
+        img.attr('src', response.results[i].background_image);
+        img.appendTo(newDiv);
         //gameDiv.append(newDiv);
+
       }
+      var platformP = $("<p>");
+      // console.log(response.results[i].stores[i].store.name);
+      // storesP.text(response.results[i].stores.store);
+
+      var gamePlatforms = response.results[i].platforms[0].platform.name;
+      console.log(gamePlatforms);
+      platformP.text(gamePlatforms);
+      ratingInfoP.prepend(platformP);
+
+      
+      newH3.text(response.results[i].name);
+      ratingInfoP.text(response.results[i].rating);
+      newDiv.append(newH3);
+      newDiv.append(platformP);
+      // newDiv.append(storesP);
       
       
-      
-      
-      
-      
-      
-        
-        
-        newH3.text(response.results[i].name);
-        ratingInfoP.text(response.results[i].rating);
-        newDiv.append(newH3);
-        newDiv.append(ratingInfoP);
-        newDiv.append(ratingInfoP);
-        
-        gameDiv.append(newDiv);
+      gameDiv.append(newDiv);
       
       newDiv.addClass("content-box animated slideInRight");
     }
@@ -294,7 +295,4 @@ videoGame();
 
 //   }
 
-
-
-//   );}
-//   videoGameArticles();
+//
