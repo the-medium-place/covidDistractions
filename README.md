@@ -24,6 +24,8 @@ View it [Here](https://bbelka.github.io/covidDistractions/)!
 
 * [News API](https://newsapi.org/)
 
+* [Rawg API](https://rawg.io/apidocs)
+
 ## Contributors
 
 * [@bbelka](http://github.com/bbelka) - Project Manager

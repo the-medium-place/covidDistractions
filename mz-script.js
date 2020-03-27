@@ -8,8 +8,6 @@ $.ajax({
 
 });
 
-
-
 //news about the covid-19//
 var covidNews = "http://newsapi.org/v2/everything?q=covid19&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
 $.ajax({
@@ -20,12 +18,8 @@ $.ajax({
 
 });
 
-
-
-
 //seattle news//
 var localNews = "http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
-
 
 //query IMDB by title
 function videoGame() {
@@ -40,14 +34,10 @@ function videoGame() {
       console.log(response.results[i]);
       var gameDiv = $("#game-div");
 
-
-
       // var gameRating= " | Rating: " + response.results[i].rating;
       var newDiv = $("<div class='content-box animated slideInRight'>");
       var newH3 = $("<h3>");
       var ratingInfoP = $("<p>");
-
-
 
       //if statement to get the vid clips of the object
       if (response.results[i].clip) {
@@ -64,8 +54,6 @@ function videoGame() {
         video.attr("href", response.results[i].clip.clip);
         newDiv.append(video);
 
-
-
       } else {
         var img = $('<img>');
         $(img).width(640);
@@ -75,13 +63,7 @@ function videoGame() {
         img.appendTo(newDiv);
         //gameDiv.append(newDiv);
 
-
       }
-
-
-      
-      
-      
       var platformP = $("<p>");
       // console.log(response.results[i].stores[i].store.name);
       // storesP.text(response.results[i].stores.store);
@@ -91,17 +73,6 @@ function videoGame() {
       platformP.text(gamePlatforms);
       ratingInfoP.prepend(platformP);
 
-
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       
       newH3.text(response.results[i].name);
       ratingInfoP.text(response.results[i].rating);
