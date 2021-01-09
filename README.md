@@ -1,14 +1,14 @@
-# **Social // Distance**
+<a href="https://the-medium-place.github.io/covidDistractions/"><h1>Social // Distance</h1></a>
 
 Are you tired of seeing the same depressing new headline every time you open your phone? Are you ready for a short distraction to take you away for a moment?
 
 **Social // Distance** allows the user to navigate away from the _news_ and into the comforting embrace of distraction.
 
-![Main Page](./images/mainscreenshot.png "Main Page Screenshot")
-![Social Page](./images/socialscreenshot.png "Social Page Screenshot")
-![Distance Page](./images/distancescreenshot.png "Distance Page Screenshot")
+![Main Page](./public/assets/images/mainscreenshot.png "Main Page Screenshot")
+![Social Page](./public/assets/images/socialscreenshot.png "Social Page Screenshot")
+![Distance Page](./public/assets/images/distancescreenshot.png "Distance Page Screenshot")
 
-View it [Here](https://bbelka.github.io/covidDistractions/)!
+<!-- View it [Here](https://bbelka.github.io/covidDistractions/)! -->
 
 ## Build Tools
 

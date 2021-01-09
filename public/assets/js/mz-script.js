@@ -1,57 +1,55 @@
-// top News articles in the US//
-var newsUrl = "http://newsapi.org/v2/top-headlines?country=us&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
-$.ajax({
-  url: newsUrl,
-  method: "GET"
-}).then(function (response) {
-  console.log(response);
+const now = new Date();
 
-});
-
-//news about the covid-19//
-var covidNews = "http://newsapi.org/v2/everything?q=covid19&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
-$.ajax({
-  url: covidNews,
-  method: "GET"
-}).then(function (response) {
-  console.log(response);
-
-});
-
-//seattle news//
-var localNews = "http://newsapi.org/v2/everything?q=Seattle&apiKey=d775fffd012c44ec8001a6ace97e7e1f";
+// FUNCTION TO ADD A 0 TO VALUES LESS THAN 10
+// HELPS DATE DISPLAY WITH 2-DIGIT MONTH AND DATE IN QUERY URL
+function addZ(n) { return n < 10 ? '0' + n : '' + n; }
 
 //query IMDB by title
 function videoGame() {
+  const videoGameURL = `https://api.rawg.io/api/games?dates=${now.getFullYear() - 1}-${addZ(now.getMonth() + 1)}-${addZ(now.getDate())},${now.getFullYear()}-${addZ(now.getMonth() + 1)}-${addZ(now.getDate())}&ordering=-added`
 
   $.ajax({
-    url: "https://api.rawg.io/api/games?dates=2020-01-01,2020-03-25&ordering=-added&cnt=10",
+    url: videoGameURL,
     method: "GET"
     //build response
   }).then(function (response) {
+    // console.log(response);
+
+    // DISPLAY TOP 10 RESULTS FROM LAST YEAR
     for (var i = 0; i < response.results.length; i++) {
-      console.log("joe wuz here");
-      console.log(response.results[i]);
+
       var gameDiv = $("#game-div");
 
-      // var gameRating= " | Rating: " + response.results[i].rating;
-      var newDiv = $("<div class='content-box animated slideInRight'>");
-      var newH3 = $("<h3>");
+      var newDiv = $("<div>", {
+        class: 'content-box animated slideInRight',
+      });
+
+      var newH3 = $("<h3>", {
+        style: 'font-weight: bold;'
+      });
+      newH3.text(response.results[i].name);
+      newDiv.append(newH3);
+
       var ratingInfoP = $("<p>");
+      response.results[i].esrb_rating ? 
+      ratingInfoP.text('ESRB Rating: ' + response.results[i].esrb_rating.name) : ratingInfoP.text('No ESRB rating data available')
+      newDiv.append(ratingInfoP);
 
       //if statement to get the vid clips of the object
       if (response.results[i].clip) {
-        var video = $('<video />', {
-          id: 'video',
-          poster: response.results[i].background_image,
+        var video = $('<video>', {
+          class: 'video',
+          width: 640,
+          height: 360,
+          controls: true,
+          text: 'Sorry, your browser doesn\'t support embedded videos.'
+        });
+        const videoSrc = $('<source>', {
           src: response.results[i].clip.clip,
           type: 'video/mp4',
-          controls: true,
         });
-        console.log('inside if statement');
-        console.log(response.results[i].clip.clip);
 
-        video.attr("href", response.results[i].clip.clip);
+        video.append(videoSrc)
         newDiv.append(video);
 
       } else {
@@ -61,29 +59,31 @@ function videoGame() {
 
         img.attr('src', response.results[i].background_image);
         img.appendTo(newDiv);
-        //gameDiv.append(newDiv);
 
       }
-      var platformP = $("<p>");
-      // console.log(response.results[i].stores[i].store.name);
-      // storesP.text(response.results[i].stores.store);
+      // var platformP = $("<p>");
 
-      var gamePlatforms = response.results[i].platforms[0].platform.name;
-      console.log(gamePlatforms);
-      platformP.text(gamePlatforms);
-      ratingInfoP.prepend(platformP);
+      let newSpan;
+      const platformDiv = $("<div>", {
+        style: 'width: 100%; display: flex; justify-content: center;'
+      })
 
-      
-      newH3.text(response.results[i].name);
-      ratingInfoP.text(response.results[i].rating);
-      newDiv.append(newH3);
-      newDiv.append(platformP);
-      // newDiv.append(storesP);
-      
-      
-      gameDiv.append(newDiv);
-      
+      response.results[i].platforms.forEach(platform => {
+        newSpan = $("<span>", {
+          text: platform.platform.name,
+          style: 'margin: 5px; font-size: 2.3rem; font-weight: bold; background: lightpink; padding: 8px;'
+        })
+
+        platformDiv.append(newSpan);
+      })
+
+      // ratingInfoP.prepend(platformP);
+      // ratingInfoP.text(response.results[i].rating);
+
+      newDiv.append(platformDiv);
       newDiv.addClass("content-box animated slideInRight");
+      gameDiv.append(newDiv);
+
     }
   });
 }
